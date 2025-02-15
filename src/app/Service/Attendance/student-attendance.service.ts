@@ -8,7 +8,7 @@ import { Attendance } from '../Models/model';
 })
 export class StudentAttendanceService {
 
-  private baseUrl = 'https://localhost:7058/api/Attendance';
+  private baseUrl = 'http://localhost:5101/api/Attendance';
 
   constructor(private http: HttpClient) { }
 

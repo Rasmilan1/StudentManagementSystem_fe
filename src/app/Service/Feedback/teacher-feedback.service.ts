@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class TeacherFeedbackService {
-  private url = "https://localhost:7058/api/Feedback/"; // Your API URL
+  private url = "http://localhost:5101/api/Feedback/"; // Your API URL
 
   constructor(private http: HttpClient) { }
 

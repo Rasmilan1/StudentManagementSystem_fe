@@ -9,14 +9,14 @@ export class TeacherRegisterService {
 
   constructor(private http:HttpClient) { }
 
-  url = 'https://localhost:7058/api/Teacher/Teacher';
+  url = 'http://localhost:5101/api/Teacher/Teacher';
 
   getTeachers(): Observable<any> {
     return this.http.get(this.url);
   }
 
   getTeacher(teacherId: string) {
-    return this.http.get<any>("https://localhost:7058/api/Teacher/TeacherById?id=" + teacherId);
+    return this.http.get<any>("http://localhost:5101/api/Teacher/TeacherById?id=" + teacherId);
   }
 
   AddTeacher(teacher: any): Observable<any> {

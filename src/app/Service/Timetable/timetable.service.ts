@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class TimetableService {
-  private apiUrl = 'https://localhost:7058/api/Timetable/TimeTable';
+  private apiUrl = 'http://localhost:5101/api/Timetable/TimeTable';
 
   constructor(private http: HttpClient) { }
 
@@ -22,10 +22,10 @@ export class TimetableService {
   }
 
   getTimetableByTeacherId(teacherId: string): Observable<any[]> {
-    return this.http.get<any[]>(`https://localhost:7058/api/Teacher/TimetableByTeacherId?id=${teacherId}`);
+    return this.http.get<any[]>(`http://localhost:5101/api/Teacher/TimetableByTeacherId?id=${teacherId}`);
   }
   getTimetableByClassId(classId: string): Observable<any[]> {
-    return this.http.get<any[]>("https://localhost:7058/api/Timetable/ByClassId?id=" + classId);
+    return this.http.get<any[]>("http://localhost:5101/api/Timetable/ByClassId?id=" + classId);
   }
 
 
@@ -35,14 +35,14 @@ export class TimetableService {
 }
 
 // getClassNameById(classId: string): Observable<any> {
-//   return this.http.get<any>(`https://localhost:7058/api/Classes/${classId}`);
+//   return this.http.get<any>(`http://localhost:5101/api/Classes/${classId}`);
 // }
 
 getClassNameById(classId: string): Observable<{ className: string }> {
-  return this.http.get<{ className: string }>(`https://localhost:7058/api/Class/ClassById?id=${classId}`);
+  return this.http.get<{ className: string }>(`http://localhost:5101/api/Class/ClassById?id=${classId}`);
 }
 // getClassNameById(classId: string): Observable<{ className: string }> {
-//   return this.http.get<{ className: string }>(`https://localhost:7058/api/Classes/${classId}`);
+//   return this.http.get<{ className: string }>(`http://localhost:5101/api/Classes/${classId}`);
 // }
 
 

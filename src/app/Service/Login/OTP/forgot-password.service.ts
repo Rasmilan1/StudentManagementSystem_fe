@@ -8,7 +8,7 @@ import { OTPChangePassword } from '../../../Auth/otp/OTPInterface';
 })
 export class ForgotPasswordService {
 
-  private apiUrl = "https://localhost:7058/api/User/"
+  private apiUrl = "http://localhost:5101/api/User/"
 
   constructor(private http: HttpClient) { }
 

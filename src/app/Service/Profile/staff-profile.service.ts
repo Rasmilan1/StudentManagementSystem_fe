@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class StaffProfileService {
 
-  url = 'https://localhost:7058/api/Staff/user'; // Replace with your actual API URL
+  url = 'http://localhost:5101/api/Staff/user'; // Replace with your actual API URL
 
   constructor(private http: HttpClient) {}
 

@@ -6,8 +6,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class TeacherNotificationService {
-  private apiUrl = 'https://localhost:7058/api/Notification/Notification';  // Your API URL
-  private getapiUrl = 'https://localhost:7058/api/Notification/Get%20Notification%20By%20UserId';
+  private apiUrl = 'http://localhost:5101/api/Notification/Notification';  // Your API URL
+  private getapiUrl = 'http://localhost:5101/api/Notification/Get%20Notification%20By%20UserId';
 
   constructor(private http: HttpClient) { }
 
@@ -24,10 +24,10 @@ export class TeacherNotificationService {
 
 
   getNotificationsByUserId(userId: string): Observable<any> {
-    return this.http.get(`https://localhost:7058/api/Notification/Get Notification By UserId?UserId=${userId}`);
+    return this.http.get(`http://localhost:5101/api/Notification/Get Notification By UserId?UserId=${userId}`);
   }
   deleteNotification(notificationId: string): Observable<any> {
-    const url = `https://localhost:7058/api/Notification/Notification/${notificationId}`;
+    const url = `http://localhost:5101/api/Notification/Notification/${notificationId}`;
     return this.http.delete(url);
   }
 

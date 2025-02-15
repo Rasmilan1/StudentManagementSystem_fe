@@ -7,7 +7,7 @@ import { feedback } from '../Models/model';
   providedIn: 'root'
 })
 export class AdminNotificationService {
-  private feedbackurl = "https://localhost:7058/api/Feedback/Feedback"; // Your API URL
+  private feedbackurl = "http://localhost:5101/api/Feedback/Feedback"; // Your API URL
 
   constructor(private http: HttpClient) { }
 
